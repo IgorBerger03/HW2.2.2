@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
     private String modelName;
     private int wheelsCount;
 
@@ -34,7 +34,7 @@ public class Transport {
         System.out.println("Проверяем прицеп");
     }
 
-    public void check(Transport transport){
+    protected static void check(Transport transport){
         if (transport != null) {
             System.out.println("Обслуживаем " + transport.getModelName());
             for (int i = 0; i < transport.getWheelsCount(); i++) {
