@@ -22,37 +22,6 @@ public abstract class Transport {
         this.wheelsCount = wheelsCount;
     }
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-
-    public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
-    }
-
-    protected static void check(Transport transport){
-        if (transport != null) {
-            System.out.println("Обслуживаем " + transport.getModelName());
-            for (int i = 0; i < transport.getWheelsCount(); i++) {
-                transport.updateTyre();
-            }
-            transport.checkEngine();
-        } else if (transport != null) {
-            System.out.println("Обслуживаем " + transport.getModelName());
-            for (int i = 0; i < transport.getWheelsCount(); i++) {
-                transport.updateTyre();
-            }
-            transport.checkEngine();
-            transport.checkTrailer();
-        } else if (transport != null) {
-            System.out.println("Обслуживаем " + transport.getModelName());
-            for (int i = 0; i < transport.getWheelsCount(); i++) {
-                transport.updateTyre();
-            }
-        }
-    }
+    public abstract void updateTyre();
+    public abstract void transportService();
 }
